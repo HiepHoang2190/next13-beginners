@@ -19,7 +19,10 @@ export default function CreatePage() {
       revalidateOnReconnect: false
     }
 		)
-		console.log(">>> check res:" , data )
+		// console.log(">>> check res:" , data )
+		if (!data) {
+			return <div>loading...</div>
+		}
 
 	// useEffect(() => {
 	// 	const fetchData = async () => {
@@ -50,7 +53,9 @@ export default function CreatePage() {
 					</Link>
 				</li>
 			</ul>
-			<AppTable />
+			<AppTable
+				blogs = {data}
+			/>
 		</div>
 	)
 }
