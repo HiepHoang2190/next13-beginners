@@ -1,9 +1,9 @@
 const LotusDev = () => {
-    return (
-        <>
-            Lotus Admin
-        </>
-    )
+	return (
+		<>
+				Lotus Admin
+		</>
+	)
 }
 
 export default LotusDev
