@@ -1,6 +1,7 @@
 import Link from "next/link"
 import x from '../styles/app.module.css'
 import y from '../styles/test.module.css'
+import AppTable from '../components/app.table'
 
 export default function CreatePage() {
 	return (
@@ -23,6 +24,7 @@ export default function CreatePage() {
 					</Link>
 				</li>
 			</ul>
+			<AppTable />
 		</div>
 	)
 }
