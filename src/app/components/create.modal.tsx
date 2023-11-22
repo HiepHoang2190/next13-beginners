@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal'
 import { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
+import { mutate } from "swr"
 
 interface IProps {
     showModalCreate: boolean;
@@ -42,8 +43,9 @@ function CreateModal(props: IProps) {
       }).then(res => res.json())
           .then(res => {
             if (res) {
-                toast.success("Create new blog succeed !");
-                handleCloseModal();
+                toast.success("Create new blog succeed !")
+                handleCloseModal()
+                mutate("http://localhost:8000/blogs")
             }
       });
     }
