@@ -54,7 +54,7 @@ export default function CreatePage() {
 				</li>
 			</ul>
 			<AppTable
-				blogs = {data}
+				blogs={data?.sort((a: any, b: any) => a.id - b.id)}
 			/>
 		</div>
 	)
